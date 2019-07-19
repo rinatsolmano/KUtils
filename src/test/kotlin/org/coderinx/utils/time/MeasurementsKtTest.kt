@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.TestFactory
 import java.util.concurrent.TimeUnit
-import kotlin.system.measureTimeMillis
 
 class MeasurementsKtTest {
 
@@ -26,7 +25,6 @@ class MeasurementsKtTest {
             }
         }
 
-
     @TestFactory
     fun `measures time as expected`() = TimeUnit.values()
         .map { timeUnit ->
@@ -35,7 +33,6 @@ class MeasurementsKtTest {
                     println("Hello world!")
                 }
                 assertTrue(time >= 0)
-                measureTimeMillis { }
             }
         }
 }
