@@ -16,7 +16,7 @@ Add dependency:
 <dependency>
   <groupId>org.coderinx</groupId>
   <artifactId>kutils</artifactId>
-  <version>0.2.0</version>
+  <version>0.2.1</version>
 </dependency>
 ```
 
@@ -27,7 +27,7 @@ Add dependency:
 
 ```groovy
 dependencies {
-    implementation 'org.coderinx:kutils:0.2.0'
+    implementation 'org.coderinx:kutils:0.2.1'
 }
 ```
 
@@ -45,7 +45,7 @@ Add dependencies (you can also add other modules that you need):
 
 ```kotlin
 dependencies {
-    implementation("org.coderinx:kutils:0.2.0")
+    implementation("org.coderinx:kutils:0.2.1")
 }
 ```
 
@@ -92,7 +92,7 @@ executing...
 Execution has been completed for 2001 ms
 ```
 
-####Use specific `java.util.concurrent.TimeUnit` if necessary:
+#### Use specific `java.util.concurrent.TimeUnit` if necessary:
 `withTimeMeasurement`
 
 ```kotlin
