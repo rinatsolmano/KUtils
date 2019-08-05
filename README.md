@@ -41,7 +41,7 @@ repository {
 
 ### Gradle Kotlin DSL
 
-Add dependencies (you can also add other modules that you need):
+Add dependency:
 
 ```kotlin
 dependencies {
