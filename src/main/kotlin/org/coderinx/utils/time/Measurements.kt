@@ -19,7 +19,7 @@ data class MeasuredResult<T>(
  * Executes the given [block] and returns it result and elapsed time in given [timeUnit].
  */
 @JvmOverloads
-fun <T> withTimeMeasurement(timeUnit: TimeUnit = MILLISECONDS, block: () -> T): MeasuredResult<T> {
+inline fun <T> withTimeMeasurement(timeUnit: TimeUnit = MILLISECONDS, block: () -> T): MeasuredResult<T> {
     val start = System.nanoTime()
     val result = block.invoke()
     val elapsed = System.nanoTime() - start
@@ -38,7 +38,7 @@ fun <T> withTimeMeasurement(timeUnit: TimeUnit = MILLISECONDS, block: () -> T): 
  * Executes the given [block] and returns elapsed time in given [timeUnit].
  */
 @JvmOverloads
-fun measureTime(timeUnit: TimeUnit = MILLISECONDS, block: () -> Unit): Long {
+inline fun measureTime(timeUnit: TimeUnit = MILLISECONDS, block: () -> Unit): Long {
     val start = System.nanoTime()
     block.invoke()
     val elapsed = System.nanoTime() - start
