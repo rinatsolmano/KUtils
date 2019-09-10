@@ -16,7 +16,7 @@ Add dependency:
 <dependency>
   <groupId>org.coderinx</groupId>
   <artifactId>kutils</artifactId>
-  <version>0.2.1</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 
@@ -27,7 +27,7 @@ Add dependency:
 
 ```groovy
 dependencies {
-    implementation 'org.coderinx:kutils:0.2.1'
+    implementation 'org.coderinx:kutils:0.3.0'
 }
 ```
 
@@ -45,7 +45,7 @@ Add dependency:
 
 ```kotlin
 dependencies {
-    implementation("org.coderinx:kutils:0.2.1")
+    implementation("org.coderinx:kutils:0.3.0")
 }
 ```
 
@@ -120,4 +120,24 @@ Output:
 ```
 executing...
 Execution has been completed for 2003947161 ns
+```
+
+### Parallel modifications
+
+#### parallelMap function
+```kotlin
+runBlocking(Dispatchers.IO) {
+    val time = measureTime {
+        val collection = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        collection.parallelMap {
+            Thread.sleep(100) //some heavy operation
+            it
+        }
+    }
+    println("Execution has been completed for $time ms")
+}
+```
+Output:
+```
+Execution has been completed for 142 ms
 ```
