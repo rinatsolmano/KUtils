@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2019. coderinx.org
- * Use of this source code is governed by the Apache 2.0 license that can be found in the license/LICENSE.txt file.
+ * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE.txt file.
  */
 
 @file:kotlin.jvm.JvmName("MeasurementsKt")
